@@ -13,7 +13,7 @@ class LessonsController < ApplicationController
 
   def require_authorized_for_lesson
     course = current_lesson.section.course
-    if current_user.enrolled_in?(course) == false
+    if current_user != course.user and current_user.enrolled_in?(course) == false
       redirect_to course_path(course), alert: 'Please enroll in the course first'
     end
   end
