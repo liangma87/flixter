@@ -26,10 +26,6 @@ class EnrollmentsController < ApplicationController
 
     current_user.enrollments.create(course: current_course)
     flash[:notice] = "You have been successfully enrolled to class '#{current_course.title}'"
-
-    end
-
-
     redirect_to course_path(current_course)
   end
 
