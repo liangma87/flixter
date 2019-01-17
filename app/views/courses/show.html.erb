@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-sm-4 col-12 text-center">
       <br />
-      <% if current_user && current_user == @course.user%>
+      <% if current_user && current_user == @course.user %>
         <br />
         <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
       <% else %>
@@ -41,7 +41,7 @@
     </div>
   </div>
   <div class="col-12">
-    <% @course.sections.each do |section| %>
+    <% @course.sections.rank(:row_order).each do |section| %>
       <br />
       <div class="section">
         <h3><%= section.title %></h3>
