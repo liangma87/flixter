@@ -1,4 +1,5 @@
 class Instructor::LessonsController < ApplicationController
+  protect_from_forgery prepend: true
   before_action :authenticate_user!
   before_action :require_authorized_for_current_section, only: [:create]
   before_action :require_authorized_for_current_lesson, only: [:update]
