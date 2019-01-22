@@ -8,6 +8,14 @@ body {
   flex-direction: column;
 }
 
+.social-button {
+  margin: 4px;
+}
+
+.social a:hover {
+  text-decoration: none;
+}
+
 #flex-content-container {
   flex: 1;
 }
@@ -21,6 +29,7 @@ body {
   font-family: "Helvetica Neue", Helvetica;
   padding: 10px 10px;
   margin-top: 10px;
+  font-weight: 100;
 }
 
 #footer .container {
